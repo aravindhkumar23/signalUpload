@@ -1,0 +1,10 @@
+<?php
+	$conn = mysql_connect('localhost', 'root', '');
+	$db = mysql_select_db('signal', $conn);
+
+	$name=$_POST['name'];
+	$strength=$_POST['value'];
+	$query="INSERT INTO signal VALUES('$name', '$strength')";
+	$result=mysql_query($query);
+	echo $name;
+?>
